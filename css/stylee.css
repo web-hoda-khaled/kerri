@@ -1,0 +1,719 @@
+/*start Genral css stayles */
+@font-face {
+    font-family: montserrat ;
+    src:url(../fonts/static/Montserrat-Medium.ttf) , url(../fonts/static/Montserrat-Regulattf) , url(../fonts/static/Montserrat-Light.ttf),url(../fonts/static/Montserrat-Bold.ttf) , url(../fonts/static/Montserrat-SemiBold.ttf);
+}
+
+@font-face {
+    font-family:nunito ;
+    src:url(../fonts/Nunito/static/Nunito-Medium.ttf) , url(../fonts/Nunito/static/Nunito-Regular.ttf),url(../fonts/Nunito/static/Nunito-Light.ttf);
+}
+
+:root{
+    --mainColor:#e65f78;
+    --whait:#fff;
+    --sameWhite:#f5f5f5;
+    --black:#000;
+    --gray:#6c757d;
+    --sameBlack:#212529;
+    --bg-lay:rgba(0, 0, 0,.7) ;
+    --fontFirst:montserrat ;
+    --fontSec:nunito;
+    --bg-border: #e8e8e8;
+    --bg-fixed:#2B2424;
+    --bg-section:#F8F9FA;
+    --footer-color:#212121;
+}
+
+body{
+    font-family: var(--fontSec);
+}
+.btn{
+    color: var(--sameWhite);
+    background-color: transparent;
+    border: 1px solid var(--sameWhite) ;
+    font-size: .9rem;
+    font-family: var(--fontFirst);
+    padding: .9rem 1.5rem;
+    font-weight:600 ;
+    letter-spacing: 1px;
+    transition: all .7s;
+    -webkit-transition: all .7s;
+    -moz-transition: all .7s;
+    -ms-transition: all .7s;
+    -o-transition: all .7s;
+}
+.btn:hover{
+    color: var(--sameBlack);
+    background-color: var(--sameWhite);
+    border: 1px solid var(--sameWhite) ;
+}
+ul{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+}
+::selection{
+    background-color: #E4E7EB; 
+}
+/* start heading section */
+.heading h2{
+    font-family: var(--fontFirst);
+    color: var(--sameBlack);
+    font-size: 2rem;
+    font-weight: 600;
+}
+.heading h2 span{
+    font-weight: 500;
+}
+.heading p{
+    color: var(--gray);
+    font-size: 1rem;
+}
+/* end heading section */
+/*end Genral css stayles */
+/* ==================================start navbar=================================== */
+.navbar .nav-link{
+    color: var(--whait);
+    font-size: 1rem;
+}
+.navbar .nav-link:hover{
+    color: var(--mainColor);
+    transition: all .7s;
+    -webkit-transition: all .7s;
+    -moz-transition: all .7s;
+    -ms-transition: all .7s;
+    -o-transition: all .7s;
+}
+.navbar-toggler{
+    border: unset;
+}
+.navbar-toggler:focus{
+    border: unset;
+}
+/* ==================================end navbar=================================== */
+/* ==================================start header=================================== */
+header{
+    background-image: url(../images/header-bg.jpg);
+    background-size:cover;
+    background-repeat: no-repeat;
+}
+header .layout{
+    background-color: var(--bg-lay);
+}
+h1 , .header-contant h4 , .header-contant p {
+    color: var(--sameWhite);
+}
+.header-contant h4{
+    font-size: 1.5rem;
+    letter-spacing: 1px;
+    font-weight: 500;
+    font-family: var(--fontFirst);
+}
+h1{
+    font-size: 3.5rem;
+    font-family: var(--fontFirst);
+    font-weight:600;
+
+}
+/* .h1::after{
+    content: "";
+    position: absolute;
+    animation: text-header infinite 5s ;
+    -webkit-animation: text-header infinite 5s ;
+    touch-action: manipulation;
+}
+
+@keyframes text-header{
+    1%{
+        content: "|";
+    }
+
+    2%{
+        content: "D|";
+    }
+    
+    3%{
+        content: "De|";
+    }
+    4%{
+        content: "Dev|";
+    }
+    5%{
+        content: "Deve|";
+    }
+    
+    6%{
+        content: "Devl|";
+    }
+    7%{
+        content: "Develo|";
+    }
+    
+    8%{
+        content: "Develop|";
+    }
+    
+    9%{
+        content: "Develope|";
+    }
+    10%{
+        content: "Developer|";
+    }
+    11%{
+        content: "Develope|";
+    }
+    
+    12%{
+        content: "Develop|";
+    }
+    13%{
+        content: "Develo|";
+    }
+    14%{
+        content: "Devel|";
+    }
+    15%{
+        content: "Deve|";
+    }
+    16%{
+        content: "Dev|";
+    }
+    
+    17%{
+        content: "De|";
+    }
+    18%{
+        content: "D|";
+    }
+    19%{
+        content: "|";
+    }
+    20%{
+        content: "P|";
+    }
+    21%{
+        content: "Ph|";
+    }
+    22%{
+        content: "Pho|";
+    }
+    
+    23%{
+        content: "Phot|";
+    }
+    24%{
+        content: "Photo|";
+    }
+    25%{
+        content: "Photog|";
+    }
+    26%{
+        content: "Photogr|";
+    }
+    27%{
+        content: "Photogra|";
+    }
+    28%{
+        content: "Photograp|";
+    }
+    29%{
+        content: "Photograph|";
+    }
+    30%{
+        content: "Photographe|";
+    }
+    31%{
+        content: "Photographe|";
+    }
+    
+    32%{
+        content: "Photographer|";
+    }
+    33%{
+        content: "Photographe|";
+    }
+    34%{
+        content: "Photograph|";
+    }
+    35%{
+        content: "Photograp|";
+    }
+    36%{
+        content: "Photogra|";
+    }
+    37%{
+        content: "Photogr|";
+    }
+    38%{
+        content: "Photog|";
+    }
+    39%{
+        content: "Photo|";
+    }
+    40%{
+        content: "Phot|";
+    }
+    41%{
+        content: "Pho|";
+    }
+    42%{
+        content: "Ph|";
+    }
+    43%{
+        content: "P|";
+    }
+    44%{
+        content: "|";
+    }
+    45%{
+        content: "D|";
+    }
+    46%{
+        content: "De|";
+    }
+    47%{
+        content: "Des|";
+    }
+    48%{
+        content: "Desi|";
+    }
+    49%{
+        content: "Desig|";
+    }
+    50%{
+        content: "Design|";
+    }
+    51%{
+        content: "Designe|";
+    }
+    52%{
+        content: "Designer|";
+    }
+    53%{
+        content: "Designe|";
+    }
+    54%{
+        content: "Design|";
+    }
+    55%{
+        content: "Desig|";
+    }
+    56%{
+        content: "Desi|";
+    }
+    57%{
+        content: "Des|";
+    }
+    58%{
+        content: "De|";
+    }
+    59%{
+        content: "D|";
+    }
+    60%{
+        content: "|";
+    }
+    61%{
+        content: "F|";
+    }
+    62%{
+        content: "Fr|";
+    }
+    63%{
+        content: "Fre|";
+    }
+    64%{
+        content: "Free|";
+    }
+    65%{
+        content: "Freel|";
+    }
+    66%{
+        content: "Freela|";
+    }   
+    67%{
+        content: "Freelan|";
+    }
+    68%{
+        content: "Freelanc|";
+    }   
+    69%{
+        content: "Freelance|";
+    }
+    70%{
+        content: "Freelancer|";
+    }
+    71%{
+        content: "Freelance|";
+    }
+    72%{
+        content: "Freelanc|";
+    }
+    73%{
+        content: "Freelan|";
+    }
+    74%{
+        content: "Freela|";
+    }
+    76%{
+        content: "Freel|";
+    }
+    77%{
+        content: "Free|";
+    }
+    78%{
+        content: "Fre|";
+    }
+    79%{
+        content: "Fr|";
+    }
+    80%{
+        content: "F|";
+    }
+    81%{
+        content: "|";
+    }
+    82%{
+        content: "";
+    }
+} */
+.header-contant p {
+    font-size: 1rem;
+    font-weight:500;
+    line-height: 2rem;
+}
+.anmation{
+    
+    bottom: 8%;
+    touch-action: manipulation;
+    animation-name: anm ;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+}
+.en{
+    width: 30px;
+    height: 50px;
+    border: 2px solid var(--sameWhite);
+
+}
+.point{
+    height: 12px ;
+    width: 4px;
+    background-color: var(--sameWhite);
+    bottom: 5%;
+}
+
+@keyframes anm {
+    0%{
+        top: 85%;
+    }
+
+    25%{
+        top: 90%;
+    }
+
+    50%{
+        top:88%;
+    }
+
+    75%{
+        top: 89%;
+    }
+
+    100%{
+        top: 90%;
+    }
+}
+.fixed-icon{
+    top: 25%;
+    width: 40px;
+    height:40px;
+    background-color:var(--bg-fixed) ;
+    color: var(--sameWhite);
+}
+/* ==================================end header=================================== */
+/* ==================================start about=================================== */
+.about-img{
+    border: 1px solid var(--bg-border);
+}
+/* start heading */
+.about-info .heading h4{
+    font-family: var(--fontFirst);
+    font-size: 1.5rem;
+    font-weight: 400;
+    color: var(--sameBlack);
+    position: relative;
+    padding: 0 2px;
+}
+.about-info .heading h4::after{
+    content: "I'M Kerri Deo.";
+    position: absolute;
+    color: var(--mainColor);
+    font-weight: 600;
+}
+/* end heading */
+.about-info p{
+    color: var(--gray);
+    font-size: 1rem;
+}
+.about-link ul li{
+    width: 40px;
+    height: 40px;
+    border: 2px solid var(--bg-border);
+    transition: all .7s;
+    -webkit-transition: all .7s;
+    -moz-transition: all .7s;
+    -ms-transition: all .7s;
+    -o-transition: all .7s;
+}
+.about-icon{
+    color: var(--sameBlack);
+    transition: all .7s;
+    -webkit-transition: all .7s;
+    -moz-transition: all .7s;
+    -ms-transition: all .7s;
+    -o-transition: all .7s;
+}
+.about-link ul li:hover{
+    border: 2px solid var(--mainColor);
+}
+.about-link ul li:hover .about-icon{
+    color: var(--mainColor);
+}
+/* ==================================end about=================================== */
+/* ==================================start service=================================== */
+.service{
+    background-color: var(--bg-section);
+}
+.service-info{
+    border: 1px solid var(--bg-border);
+}
+.service-info i{
+    color: var(--mainColor);
+}
+.service-info h5{
+    color: var(--sameBlack);
+    font-size: 1.2rem;
+    font-weight: 600;
+    position: relative;
+    font-family: var(--fontFirst);
+}
+.service-info h5::after{
+    content: "";
+    position: absolute;
+    top: 130%;
+    left: 50%;
+    height: 2px;
+    width: 50px;
+    background-color: var(--mainColor);
+    transform: translatex(-50%);
+    -webkit-transform: translatex(-50%);
+    -moz-transform: translatex(-50%);
+    -ms-transform: translatex(-50%);
+    -o-transform: translatex(-50%);
+    transition: all .7s;
+    -webkit-transition: all .7s;
+    -moz-transition: all .7s;
+    -ms-transition: all .7s;
+    -o-transition: all .7s;
+}
+.service-info:hover.service-info h5::after{
+    width: 70px;
+}
+.service-info p{
+    color: var(--gray);
+    font-size: 1.025rem;
+}
+/* ==================================end service=================================== */
+/* ==================================start hire==================================== */
+.hire .btn{
+    color: var(--sameWhite);
+    background-color: var(--mainColor);
+    border: 1px solid var(--mainColor);
+}
+.hire .btn:hover{
+    color: var(--sameWhite);
+    background-color: var(--mainColor);
+    border: 1px solid var(--mainColor);
+}
+/* ==================================end hire==================================== */
+/* ==================================start slider==================================== */
+.slider{
+    background-color: var(--bg-section);
+}
+.slider-info i{
+    color: var(--mainColor);
+}
+.slider-img img {
+    border: 1px solid var(--bg-border);
+}
+.slider-info p {
+    font-size: 1.125rem;
+    font-weight: 500;
+    font-style: italic;
+    color: var(--gray);
+}
+.slider-info p span{
+    font-weight: bold;
+    color: var(--sameBlack);
+}
+.carousel-indicators button{
+    width:10px !important;
+    height: 10px !important;
+    background-color: var(--mainColor) !important;
+    border-radius: 50% !important;
+    -webkit-border-radius: 50% !important;
+    -moz-border-radius: 50% !important;
+    -ms-border-radius: 50% !important;
+    -o-border-radius: 50% !important;
+}
+/* ==================================end slider==================================== */
+/* ==================================start work ==================================== */
+.work-btn .nav-tabs , .work-btn .nav-tabs .nav-link{
+    border: unset;
+}
+.work-btn .nav-tabs .nav-link{
+    background-color: transparent;
+    color: var(--sameBlack);
+    font-size: 1rem;
+    transition: all .7s;
+    -webkit-transition: all .7s;
+    -moz-transition: all .7s;
+    -ms-transition: all .7s;
+    -o-transition: all .7s;
+}
+.work-btn .nav-tabs .nav-link:hover{
+    background-color: var(--mainColor);
+    color: var(--sameWhite);
+
+}
+.work-item {
+    overflow: hidden;
+}
+.work-item img {
+    transform: scale(1);
+    -webkit-transform: scale(1);
+    -moz-transform: scale(1);
+    -ms-transform: scale(1);
+    -o-transform: scale(1);
+    transition: all .7s;
+    -webkit-transition: all .7s;
+    -moz-transition: all .7s;
+    -ms-transition: all .7s;
+    -o-transition: all .7s;
+}
+.work-item:hover.work-item img {
+    transform: scale(1.15);
+    -webkit-transform: scale(1.15);
+    -moz-transform: scale(1.15);
+    -ms-transform: scale(1.15);
+    -o-transform: scale(1.15);
+}
+.work-item .layout p {
+    font-size: 1rem;
+    color: var(--sameWhite);
+}
+.work-item .layout h4 {
+    font-size: 1.5rem;
+    color: var(--sameWhite);
+}
+.work-item .layout{
+    background-color: rgba(0, 0, 0 , .7);
+    top: 0;
+    bottom: 0;
+    opacity: 0;
+    transition: all .5s;
+    -webkit-transition: all .5s;
+    -moz-transition: all .5s;
+    -ms-transition: all .5s;
+    -o-transition: all .5s;
+}
+.work-item:hover.work-item .layout{
+    top: 0;
+    opacity: 1;
+}
+/* ==================================end work ============================= */
+/* ==================================start blog ==================================== */
+.blog{
+    background-color: var(--bg-section);
+}
+.blog .card-title{
+color: var(--sameBlack);
+font-size: 1.5rem;
+font-weight: 800;
+}
+.blog .card-text{
+    color: var(--gray);
+font-size: 1.1rem;
+font-weight: 500;
+}
+.blog .card-text span{
+    color: var(--mainColor);
+font-weight: 700;
+
+}
+.blog .card-body a{
+    color: var(--gray);
+    font-size: 1.1rem;
+    font-weight: 800;
+}
+/* ==================================end blog ==================================== */
+/* ==================================start content ==================================== */
+.content-item  i {
+    color: var(--mainColor);
+}
+.content-item h5{
+    color: var(--sameBlack);
+font-size: 1.2rem;
+font-weight: 600;
+font-family: var(--fontFirst);
+}
+.content-item p{
+    color: var(--gray);
+font-size: 1rem;
+font-weight: 500;
+}
+.content form input ,.content form textarea{
+    border: 1px solid var(--bg-border);
+    border-radius:  3px;
+    -webkit-border-radius:  3px;
+    -moz-border-radius:  3px;
+    -ms-border-radius:  3px;
+    -o-border-radius:  3px;
+    color: var(--gray);
+    font-size: 1.15rem;
+}
+.content form .btn{
+    background-color: var(--mainColor);
+}
+/* ==================================end content ==================================== */
+/* ==================================start footer ==================================== */
+.footer{
+    background-color: var(--footer-color);
+}
+.footer-link li{
+    width: 50px;
+    height: 50px;
+    background-color: #525252;
+}
+.footer-link li i{
+    color: var(--sameWhite);
+    transition: all .6s;
+    -webkit-transition: all .6s;
+    -moz-transition: all .6s;
+    -ms-transition: all .6s;
+    -o-transition: all .6s;
+}
+.footer-link li i:hover{
+    color: var(--mainColor);
+}
+.footer-item p{
+    color: var(--sameWhite);
+    font-size: 1rem;
+    font-weight: 500;
+}
+/* ==================================end footer ==================================== */
+
+
